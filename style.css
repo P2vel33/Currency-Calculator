@@ -1,0 +1,154 @@
+body {
+  height: 90%;
+  width: 90%;
+  padding: 0% 5%;
+  position: relative;
+  overflow: hidden;
+  transform: all 0.5s;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.topWebsiteMain {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  height: 100%;
+  /* flex-direction: row; */
+}
+.topWebsite {
+  /* width: 40%; */
+  vertical-align: text-top;
+}
+
+#newButton {
+  text-transform: uppercase;
+}
+
+/* body {
+  background-color: black;
+  color: white;
+} */
+
+/* .divCalculator {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.formCalculator {
+  width: 50%;
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background: #171515;
+  }
+
+  /* .newButton {
+    color: white;
+  } */
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: #121212;
+    background: #e3dbdb;
+  }
+
+  /* .newButton {
+    color: dark;
+  } */
+}
+
+/* .newButton {
+  border-radius: 10px;
+  transition: 1s linear;
+  background: #809fff;
+} */
+
+/* .newButton:hover {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #3c82f8;
+} */
+
+.lightTheme {
+  background-color: #eee;
+  color: black;
+  transition: all 0.5s;
+  .btn-1 {
+    border: 1px solid #000000;
+  }
+  .btn-1::before {
+    background: #000000;
+  }
+}
+
+.darkTheme {
+  background-color: black;
+  color: white;
+  transition: all 0.5s;
+}
+
+#type1 {
+  /* background-color: #42a5f5; */
+  padding-bottom: 50px;
+}
+
+.btn-1 {
+  text-align: center;
+  display: inline-block;
+  padding: 15px 15px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 20px;
+}
+
+.btn-1:before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 50px;
+  background: #fff;
+  left: -55px;
+  top: -40px;
+  transform: rotate(37deg);
+  transition: all 0.3s;
+  opacity: 0.3;
+}
+
+.btn-1:hover:before {
+  left: 95%;
+}
+
+.inputQuantityCurrency {
+  width: 65%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="topWebsiteMain">
+      <h1 class="topWebsite">Калькулятор валют</h1>
+      <div id="type1">
+        <div class="btn-1 topWebsite" id="changeLang">EN</div>
+      </div>
+      <label id="labelChangeTheColor" for="changeTheColor" hidden
+        >Сменить тему</label
+      >
+      <div class="btn-1 topWebsite" id="newButton"></div>
+    </div>
+
+    <!-- <section class="sectionCalculator"> -->
+    <div class="divCalculator">
+      <form class="formCalculator" action="" method="post">
+        <input
+          class="inputQuantityCurrency"
+          id="inputQuantityCurrencyIncoming"
+          type="text"
+          placeholder="Введите количество конвертируемой валюты"
+        />
+      </form>
+      <form class="formCalculator" action="" method="post">
+        <label class="labelChangeCurrency" for="currences"
+          >Выберите валюту</label
+        >
+        <select name="currences" id="selectFirstValue">
+          <option value="none"></option>
+        </select>
+      </form>
+      <button class="transport" hidden></button>
+      <form class="formCalculator" action="" method="post">
+        <input
+          class="inputQuantityCurrency"
+          id="inputQuantityCurrencyComingOut"
+          type="text"
+          placeholder="Количество конвертируемой валюты"
+        />
+      </form>
+      <form class="formCalculator" action="" method="post">
+        <label class="labelChangeCurrency" for="currences"
+          >Выберите валюту</label
+        >
+        <select name="currences" id="selectSecondValue">
+          <option value="none"></option>
+        </select>
+      </form>
+    </div>
+    <!-- </section> -->
+    <ul class="spisok">
+      <li class="elemSpisok">1</li>
+      <li class="elemSpisok">2</li>
+      <li class="elemSpisok">3</li>
+      <li class="elemSpisok">4</li>
+      <li class="elemSpisok">5</li>
+      <li class="elemSpisok">6</li>
+    </ul>
+
+    <script src="./course.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
