@@ -102,19 +102,19 @@ selectFirst.addEventListener("change", function () {
   currencySelectFirst = this.value;
   inputFirst.value = "";
   inputSecond.value = "";
-  console.log(currencySelectFirst);
+  // console.log(currencySelectFirst);
 });
 
 selectSecond.addEventListener("change", function () {
   currencySelectSecond = this.value;
   inputFirst.value = "";
   inputSecond.value = "";
-  console.log(currencySelectSecond);
+  // console.log(currencySelectSecond);
 });
 
 inputFirst.addEventListener("keyup", function () {
   meaningInputFirst = this.value;
-  console.log(meaningInputFirst);
+  // console.log(meaningInputFirst);
   let diff = null;
   // if (diff == NaN) {
   //   document.querySelectorAll(
@@ -130,18 +130,18 @@ inputFirst.addEventListener("keyup", function () {
   diff =
     data.conversion_rates[currencySelectSecond] /
     data.conversion_rates[currencySelectFirst];
-  console.log(diff);
+  // console.log(diff);
   inputSecond.value = meaningInputFirst * diff;
 });
 
 inputSecond.addEventListener("keyup", function () {
   meaningInputSecond = this.value;
-  console.log(meaningInputSecond);
+  // console.log(meaningInputSecond);
   let diff = null;
   diff =
     data.conversion_rates[currencySelectFirst] /
     data.conversion_rates[currencySelectSecond];
-  console.log(diff);
+  // console.log(diff);
   inputFirst.value = meaningInputSecond * diff;
 });
 
@@ -207,4 +207,67 @@ btn.addEventListener("click", () => {
   }
 });
 
-console.log((data.base_code = "AFN"));
+let noneSelectFirst = null;
+selectFirst.addEventListener("change", function () {
+  noneSelectFirst = this.value;
+});
+
+inputFirst.addEventListener("keyup", () => {
+  if (
+    noneSelectFirst === null ||
+    noneSelectFirst === selectFirst.options[0].value
+  ) {
+    document
+      .querySelector("#labelChangeCurrencyIn")
+      .classList.add("errorLabel");
+  } else {
+    document
+      .querySelector("#labelChangeCurrencyIn")
+      .classList.remove("errorLabel");
+  }
+  if (
+    noneSelectSecond === null ||
+    noneSelectSecond === selectSecond.options[0].value
+  ) {
+    document
+      .querySelector("#labelChangeCurrencyOut")
+      .classList.add("errorLabel");
+  } else {
+    document
+      .querySelector("#labelChangeCurrencyOut")
+      .classList.remove("errorLabel");
+  }
+});
+
+let noneSelectSecond = null;
+selectSecond.addEventListener("change", function () {
+  noneSelectSecond = this.value;
+});
+
+inputSecond.addEventListener("keyup", () => {
+  if (
+    noneSelectSecond === null ||
+    noneSelectSecond === selectSecond.options[0].value
+  ) {
+    document
+      .querySelector("#labelChangeCurrencyOut")
+      .classList.add("errorLabel");
+  } else {
+    document
+      .querySelector("#labelChangeCurrencyOut")
+      .classList.remove("errorLabel");
+  }
+  if (
+    noneSelectFirst === null ||
+    noneSelectFirst === selectFirst.options[0].value
+  ) {
+    document
+      .querySelector("#labelChangeCurrencyIn")
+      .classList.add("errorLabel");
+    selectFirst.classList.add("errorSelect");
+  } else {
+    document
+      .querySelector("#labelChangeCurrencyIn")
+      .classList.remove("errorLabel");
+  }
+});

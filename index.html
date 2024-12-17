@@ -8,10 +8,12 @@
   </head>
   <body>
     <div class="topWebsiteMain">
-      <h1 class="topWebsite">Калькулятор валют</h1>
-      <div id="type1">
-        <div class="btn-1 topWebsite" id="changeLang">EN</div>
-      </div>
+      <h1 class="topWebsite flowtext" style="margin: auto">
+        Калькулятор валют
+      </h1>
+      <!-- <div id="type1"> -->
+      <div class="btn-1 topWebsite" id="changeLang">EN</div>
+      <!-- </div> -->
       <label id="labelChangeTheColor" for="changeTheColor" hidden
         >Сменить тему</label
       >
@@ -20,49 +22,53 @@
 
     <!-- <section class="sectionCalculator"> -->
     <div class="divCalculator">
-      <form class="formCalculator" action="" method="post">
-        <input
-          class="inputQuantityCurrency"
-          id="inputQuantityCurrencyIncoming"
-          type="text"
-          placeholder="Введите количество конвертируемой валюты"
-        />
-      </form>
-      <form class="formCalculator" action="" method="post">
-        <label class="labelChangeCurrency" for="currences"
-          >Выберите валюту</label
-        >
-        <select name="currences" id="selectFirstValue">
-          <option value="none"></option>
-        </select>
-      </form>
+      <div class="claculatorFormIn">
+        <form class="formCalculator" action="" method="post">
+          <input
+            class="inputQuantityCurrency"
+            id="inputQuantityCurrencyIncoming"
+            type="text"
+            placeholder="Введите количество конвертируемой валюты"
+          />
+        </form>
+        <form class="formCalculatorIn" action="" method="post">
+          <label
+            class="labelChangeCurrency"
+            for="currences"
+            id="labelChangeCurrencyIn"
+            hidden
+            >Выберите валюту</label
+          >
+          <select name="currences" id="selectFirstValue">
+            <option value="none"></option>
+          </select>
+        </form>
+      </div>
       <button class="transport" hidden></button>
-      <form class="formCalculator" action="" method="post">
-        <input
-          class="inputQuantityCurrency"
-          id="inputQuantityCurrencyComingOut"
-          type="text"
-          placeholder="Количество конвертируемой валюты"
-        />
-      </form>
-      <form class="formCalculator" action="" method="post">
-        <label class="labelChangeCurrency" for="currences"
-          >Выберите валюту</label
-        >
-        <select name="currences" id="selectSecondValue">
-          <option value="none"></option>
-        </select>
-      </form>
+      <div class="calculatorFormOut">
+        <form class="formCalculator" action="" method="post">
+          <input
+            class="inputQuantityCurrency"
+            id="inputQuantityCurrencyComingOut"
+            type="text"
+            placeholder="Количество конвертируемой валюты"
+          />
+        </form>
+        <form class="formCalculator" action="" method="post">
+          <label
+            class="labelChangeCurrency"
+            for="currences"
+            id="labelChangeCurrencyOut"
+            hidden
+            >Выберите валюту</label
+          >
+          <select name="currences" id="selectSecondValue">
+            <option value="none"></option>
+          </select>
+        </form>
+      </div>
     </div>
     <!-- </section> -->
-    <ul class="spisok">
-      <li class="elemSpisok">1</li>
-      <li class="elemSpisok">2</li>
-      <li class="elemSpisok">3</li>
-      <li class="elemSpisok">4</li>
-      <li class="elemSpisok">5</li>
-      <li class="elemSpisok">6</li>
-    </ul>
 
     <script src="./course.js"></script>
     <script src="./main.js"></script>
