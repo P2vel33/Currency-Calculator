@@ -78,24 +78,15 @@ h1 {
     color: #121212;
     background: #e3dbdb;
   }
-
-  /* .newButton {
-    color: dark;
-  } */
 }
 
-/* .newButton {
-  border-radius: 10px;
-  transition: 1s linear;
-  background: #809fff;
-} */
-
-/* .newButton:hover {
-  box-shadow: 0 0 0 2px white, 0 0 0 4px #3c82f8;
-} */
-
 .lightTheme {
-  background-color: #eee;
+  background-image: url("./Phones/23.avif");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-color: #eee; */
   color: black;
   transition: all 0.5s;
   .btn-1 {
@@ -104,12 +95,6 @@ h1 {
   .btn-1::before {
     background: #000000;
   }
-}
-
-.darkTheme {
-  background-color: black;
-  color: white;
-  transition: all 0.5s;
 }
 
 .btn-1 {
@@ -141,14 +126,6 @@ h1 {
   left: 95%;
 }
 
-/* .inputQuantityCurrency {
-  width: 65%;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0;
-} */
-
 *,
 *::before,
 *::after {
@@ -157,40 +134,10 @@ h1 {
 
 .errorLabel {
   color: red;
-  /* text-transform: uppercase; */
-  /* transform: all 1s; */
 }
-
-/* input {
-  height: 40%;
-  font-size: 6em;
-} */
 
 .errorSelect {
   background-color: red;
-}
-
-/* select {
-  height: 40%;
-  font-size: 6em;
-} */
-
-.calculatorFormOut {
-  width: 100%;
-  height: 320px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-.claculatorFormIn {
-  width: 100%;
-  height: 320px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
 }
 
 h1 {
@@ -222,58 +169,89 @@ h1 {
   }
 }
 
-/* 
-.loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+.divCalculator {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 200px 400px;
+  align-items: center;
 }
 
-.loader span {
-  font-family: arial;
-  font-size: 35px;
-  color: gray;
-  display: inline-block;
-  transition: all 0.5s;
-  animation: animate 2s infinite;
+input {
+  min-width: 240px;
+  width: 80%;
+  height: 100%;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #999;
+  font-size: 20px;
+  font-family: Tahoma;
 }
 
-.loader span:nth-child(1) {
-  animation-delay: 0.1s;
+select {
+  min-width: none;
+  width: max-content;
+  height: 50%;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #999;
+  font-size: 16px;
+  font-family: Tahoma;
 }
 
-.loader span:nth-child(2) {
-  animation-delay: 0.2s;
+input {
+  color: purple;
+  /* Делает само поле ввода прозрачным */
+  background: transparent;
+  /* Убираем рамки вокруг поля ввода */
+  border: none;
+  /* Добавим нижнюю черту для красоты */
+  border-bottom: 1px solid #444;
 }
 
-.loader span:nth-child(3) {
-  animation-delay: 0.3s;
+select {
+  color: purple;
+  background-color: black;
+  /* Делает само поле ввода прозрачным */
+  background: transparent;
+  /* Убираем рамки вокруг поля ввода */
+  border: none;
+  /* Добавим нижнюю черту для красоты */
+  border-bottom: 1px solid #444;
 }
 
-.loader span:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.loader span:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-.loader span:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-.loader span:nth-child(7) {
-  animation-delay: 0.7s;
-}
-
-@keyframes animate {
-  0% {
-    color: white;
-    transform: translateY(0);
-    margin: 0;
-  }
-  10% {
-    color: purple;
-  }
+/* input::placeholder {
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(77, 2, 71, 0.5);
 } */
+
+.darkTheme {
+  background-image: url("./Phones/232323232.avif");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  transition: all 0.5s;
+
+  input::placeholder {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(194, 206, 196, 0.5);
+  }
+
+  select option {
+    color: rgba(221, 225, 222, 0.5);
+    background-color: rgba(48, 49, 48, 1);
+  }
+
+  select {
+    color: rgba(221, 225, 222, 1);
+  }
+
+  input {
+    color: rgba(221, 225, 222, 1);
+  }
+}
+
+.inputNotNullDark {
+  border-bottom: 1px solid #cbcbcb;
+}

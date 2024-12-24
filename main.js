@@ -217,25 +217,28 @@ inputFirst.addEventListener("keyup", () => {
     noneSelectFirst === null ||
     noneSelectFirst === selectFirst.options[0].value
   ) {
-    document
-      .querySelector("#labelChangeCurrencyIn")
-      .classList.add("errorLabel");
+    // document
+    //   .querySelector("#labelChangeCurrencyIn")
+    //   .classList.add("errorLabel");
+    alert("Пожалуйста выберите валюту");
+    inputFirst.value = "";
+    inputSecond.value = "";
   } else {
-    document
-      .querySelector("#labelChangeCurrencyIn")
-      .classList.remove("errorLabel");
+    // document
+    //   .querySelector("#labelChangeCurrencyIn")
+    //   .classList.remove("errorLabel");
   }
   if (
     noneSelectSecond === null ||
     noneSelectSecond === selectSecond.options[0].value
   ) {
-    document
-      .querySelector("#labelChangeCurrencyOut")
-      .classList.add("errorLabel");
+    document;
+    // .querySelector("#labelChangeCurrencyOut")
+    // .classList.add("errorLabel");
   } else {
-    document
-      .querySelector("#labelChangeCurrencyOut")
-      .classList.remove("errorLabel");
+    document;
+    // .querySelector("#labelChangeCurrencyOut")
+    // .classList.remove("errorLabel");
   }
 });
 
@@ -249,25 +252,44 @@ inputSecond.addEventListener("keyup", () => {
     noneSelectSecond === null ||
     noneSelectSecond === selectSecond.options[0].value
   ) {
-    document
-      .querySelector("#labelChangeCurrencyOut")
-      .classList.add("errorLabel");
+    // document
+    //   .querySelector("#labelChangeCurrencyOut")
+    //   .classList.add("errorLabel");
+    alert("Пожалуйста выберите валюту");
+    inputFirst.value = "";
+    inputSecond.value = "";
   } else {
-    document
-      .querySelector("#labelChangeCurrencyOut")
-      .classList.remove("errorLabel");
+    // document
+    //   .querySelector("#labelChangeCurrencyOut")
+    //   .classList.remove("errorLabel");
   }
   if (
     noneSelectFirst === null ||
     noneSelectFirst === selectFirst.options[0].value
   ) {
-    document
-      .querySelector("#labelChangeCurrencyIn")
-      .classList.add("errorLabel");
-    selectFirst.classList.add("errorSelect");
+    // document
+    //   .querySelector("#labelChangeCurrencyIn")
+    //   .classList.add("errorLabel");
+    // selectFirst.classList.add("errorSelect");
   } else {
-    document
-      .querySelector("#labelChangeCurrencyIn")
-      .classList.remove("errorLabel");
+    // document
+    //   .querySelector("#labelChangeCurrencyIn")
+    //   .classList.remove("errorLabel");
+  }
+});
+
+inputFirst.addEventListener("keyup", () => {
+  if (inputFirst.value !== "") {
+    inputFirst.classList.add("inputNotNullDark");
+  } else {
+    inputFirst.classList.remove("inputNotNullDark");
+  }
+});
+
+inputSecond.addEventListener("keyup", () => {
+  if (inputSecond.value !== "") {
+    inputSecond.classList.add("inputNotNullDark");
+  } else {
+    inputSecond.classList.remove("inputNotNullDark");
   }
 });
